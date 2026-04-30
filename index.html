@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Promptora - Viral Prompts</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="phone-shell" aria-label="Promptora viral prompt app">
+      <header class="app-header">
+        <a class="brand" href="#" aria-label="Promptora home">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>Promptora</span>
+        </a>
+        <button class="avatar" type="button" aria-label="Open profile">
+          <span>AI</span>
+        </button>
+      </header>
+
+      <section class="search-card" aria-label="Search trending prompts">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m21 21-4.35-4.35M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Z" />
+        </svg>
+        <input id="searchInput" type="search" placeholder="Search..." />
+        <button class="filter-button" type="button" id="refreshBtn" aria-label="Refresh prompt trends">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h10M18 7h2M4 17h2M10 17h10M7 5v4M17 15v4" />
+          </svg>
+        </button>
+      </section>
+
+      <section class="section-block" aria-labelledby="explore-title">
+        <div class="section-head">
+          <h1 id="explore-title">Explore</h1>
+          <button type="button" data-platform="All">See all</button>
+        </div>
+
+        <div class="explore-grid" aria-label="Featured prompt categories">
+          <button class="explore-card blue active" type="button" data-platform="TikTok">
+            <span class="category-visual book" aria-hidden="true"></span>
+            <strong>TikTok</strong>
+            <small>Hooks that stop scroll</small>
+          </button>
+          <button class="explore-card mint" type="button" data-platform="Instagram">
+            <span class="category-visual pulse" aria-hidden="true"></span>
+            <strong>Reels</strong>
+            <small>Save-worthy prompts</small>
+          </button>
+          <button class="explore-card violet" type="button" data-platform="YouTube">
+            <span class="category-visual bag" aria-hidden="true"></span>
+            <strong>Shorts</strong>
+            <small>Fast idea scripts</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="category-title">
+        <div class="section-head">
+          <h2 id="category-title">Choose Categories</h2>
+          <span id="resultCount">8 prompts</span>
+        </div>
+
+        <div class="category-grid" aria-label="Prompt categories">
+          <button class="category-tile" type="button" data-query="business">
+            <span class="round-icon sky" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M5 9h14v10H5zM5 13h14" /></svg>
+            </span>
+            <span>Business</span>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          </button>
+
+          <button class="category-tile" type="button" data-query="food">
+            <span class="round-icon peach" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 3v8M11 3v8M7 7h4M18 3v18M15 3v7a3 3 0 0 0 3 3" /></svg>
+            </span>
+            <span>Food</span>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          </button>
+
+          <button class="category-tile" type="button" data-query="nature">
+            <span class="round-icon mint" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14ZM5 19 19 5" /></svg>
+            </span>
+            <span>Nature</span>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          </button>
+
+          <button class="category-tile" type="button" data-query="travel">
+            <span class="round-icon lavender" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m4 16 16-8-8 16-2-8-6-2Z" /></svg>
+            </span>
+            <span>Travel</span>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          </button>
+
+          <button class="category-tile" type="button" data-query="entertainment">
+            <span class="round-icon pink" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 18V5l10-2v13M9 9l10-2M5 21a4 4 0 1 0 4-4 4 4 0 0 0-4 4ZM15 18a4 4 0 1 0 4-4 4 4 0 0 0-4 4Z" /></svg>
+            </span>
+            <span>Entertainment</span>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          </button>
+
+          <button class="category-tile" type="button" data-query="lifestyle">
+            <span class="round-icon cream" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m4 10 8-5 8 5-8 5-8-5ZM7 13v4c3 2 7 2 10 0v-4" /></svg>
+            </span>
+            <span>Lifestyle</span>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="prompt-panel" aria-labelledby="prompt-title">
+        <div class="section-head">
+          <h2 id="prompt-title">Viral Prompts</h2>
+          <span id="radarStatus">8 active</span>
+        </div>
+        <div class="prompt-list" id="promptList"></div>
+      </section>
+
+      <form class="brief-sheet" id="briefForm" aria-label="Create prompt brief">
+        <div class="section-head">
+          <h2>Creator Brief</h2>
+          <span id="avgLift">42%</span>
+        </div>
+        <label>
+          Niche
+          <input id="nicheInput" type="text" placeholder="skincare, coaching, cafes..." />
+        </label>
+        <label>
+          Audience
+          <select id="moodInput">
+            <option>curious beginners</option>
+            <option>busy professionals</option>
+            <option>budget shoppers</option>
+            <option>trend watchers</option>
+          </select>
+        </label>
+        <button type="submit">Create brief</button>
+        <output id="briefOutput">Add your niche to turn the top viral format into a posting plan.</output>
+      </form>
+
+      <nav class="bottom-nav" aria-label="Bottom navigation">
+        <button class="tab active" type="button" data-view="discover">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20h-5v-6H9v6H4z" /></svg>
+          <span>Home</span>
+        </button>
+        <button class="tab" type="button" data-view="saved">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7zM14 3v5h5M10 13h6M10 17h6" /></svg>
+          <span>Saved</span>
+        </button>
+        <button class="add-tab" type="button" data-view="brief" aria-label="Create brief">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+        </button>
+        <button class="tab" type="button" data-platform="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v11H4zM8 7V5h8v2M8 13h8" /></svg>
+          <span>Threads</span>
+        </button>
+        <button class="tab" type="button" data-view="discover">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM7 15l3-3 3 3 2-2 3 3" /></svg>
+          <span>Gallery</span>
+        </button>
+      </nav>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
