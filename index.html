@@ -1,176 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Promptora - Viral Prompts</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main class="phone-shell" aria-label="Promptora viral prompt app">
-      <header class="app-header">
-        <a class="brand" href="#" aria-label="Promptora home">
-          <span class="brand-mark" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-          <span>Promptora</span>
-        </a>
-        <button class="avatar" type="button" aria-label="Open profile">
-          <span>AI</span>
-        </button>
-      </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findora App</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Views -->
+        <div id="home-view" class="view active">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0" y="0" width="8" height="28" rx="4" fill="#4b7bec"/>
+                        <rect x="10" y="0" width="14" height="8" rx="4" fill="#769bf4"/>
+                        <rect x="10" y="12" width="10" height="8" rx="4" fill="#a4bdfc"/>
+                    </svg>
+                </div>
+                <h1>Findora</h1>
+            </div>
+            <div class="profile-pic">
+                <img src="https://i.pravatar.cc/150?img=47" alt="Profile Picture">
+            </div>
+        </header>
 
-      <section class="search-card" aria-label="Search trending prompts">
-        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m21 21-4.35-4.35M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Z" />
-        </svg>
-        <input id="searchInput" type="search" placeholder="Search..." />
-        <button class="filter-button" type="button" id="refreshBtn" aria-label="Refresh prompt trends">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 7h10M18 7h2M4 17h2M10 17h10M7 5v4M17 15v4" />
-          </svg>
-        </button>
-      </section>
-
-      <section class="section-block" aria-labelledby="explore-title">
-        <div class="section-head">
-          <h1 id="explore-title">Explore</h1>
-          <button type="button" data-platform="All">See all</button>
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-box">
+                <i class="ph ph-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search...">
+                <i class="ph ph-faders filter-icon"></i>
+            </div>
         </div>
 
-        <div class="explore-grid" aria-label="Featured prompt categories">
-          <button class="explore-card blue active" type="button" data-platform="TikTok">
-            <span class="category-visual book" aria-hidden="true"></span>
-            <strong>TikTok</strong>
-            <small>Hooks that stop scroll</small>
-          </button>
-          <button class="explore-card mint" type="button" data-platform="Instagram">
-            <span class="category-visual pulse" aria-hidden="true"></span>
-            <strong>Reels</strong>
-            <small>Save-worthy prompts</small>
-          </button>
-          <button class="explore-card violet" type="button" data-platform="YouTube">
-            <span class="category-visual bag" aria-hidden="true"></span>
-            <strong>Shorts</strong>
-            <small>Fast idea scripts</small>
-          </button>
+        <!-- Explore Section -->
+        <section class="explore-section">
+            <div class="section-header">
+                <h2>Explore</h2>
+                <a href="#" class="see-all">See all</a>
+            </div>
+            <div class="explore-cards">
+                <!-- Education Card -->
+                <div class="card explore-card" style="background-color: #f2f7fb;">
+                    <div class="icon-container">
+                         <i class="ph-fill ph-book-open" style="font-size: 64px; color: #4b7bec;"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <p>Learn & grow</p>
+                </div>
+                <!-- Health Card -->
+                <div class="card explore-card" style="background-color: #f0fbf6;">
+                    <div class="icon-container">
+                        <i class="ph-fill ph-heartbeat" style="font-size: 64px; color: #20bf6b;"></i>
+                    </div>
+                    <h3>Health</h3>
+                    <p>Stay healthy</p>
+                </div>
+                <!-- Shopping Card -->
+                <div class="card explore-card" style="background-color: #f7f3ff;">
+                    <div class="icon-container">
+                        <i class="ph-fill ph-shopping-bag" style="font-size: 64px; color: #a55eea;"></i>
+                    </div>
+                    <h3>Shopping</h3>
+                    <p>Shop smarter</p>
+                </div>
+                <!-- Tech Card -->
+                <div class="card explore-card extra-card" style="display: none; background-color: #f0f4ff;">
+                    <div class="icon-container">
+                        <i class="ph-fill ph-desktop" style="font-size: 64px; color: #4834d4;"></i>
+                    </div>
+                    <h3>Tech</h3>
+                    <p>Gadgets & gear</p>
+                </div>
+                <!-- Sports Card -->
+                <div class="card explore-card extra-card" style="display: none; background-color: #fff0f0;">
+                    <div class="icon-container">
+                        <i class="ph-fill ph-basketball" style="font-size: 64px; color: #eb4d4b;"></i>
+                    </div>
+                    <h3>Sports</h3>
+                    <p>Stay active</p>
+                </div>
+                <!-- Art Card -->
+                <div class="card explore-card extra-card" style="display: none; background-color: #fef4e8;">
+                    <div class="icon-container">
+                        <i class="ph-fill ph-palette" style="font-size: 64px; color: #f0932b;"></i>
+                    </div>
+                    <h3>Art</h3>
+                    <p>Get creative</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Choose Categories Section -->
+        <section class="categories-section">
+            <h2>Choose Categories</h2>
+            <div class="categories-grid">
+                <!-- Business -->
+                <div class="card category-card">
+                    <div class="cat-icon-container" style="background-color: #edf2fb; color: #4b7bec;">
+                        <i class="ph ph-briefcase"></i>
+                    </div>
+                    <span class="cat-title">Business</span>
+                    <i class="ph ph-caret-right cat-arrow"></i>
+                </div>
+                <!-- Food -->
+                <div class="card category-card">
+                    <div class="cat-icon-container" style="background-color: #fff4ed; color: #fa8231;">
+                        <i class="ph ph-fork-knife"></i>
+                    </div>
+                    <span class="cat-title">Food</span>
+                    <i class="ph ph-caret-right cat-arrow"></i>
+                </div>
+                <!-- Nature -->
+                <div class="card category-card">
+                    <div class="cat-icon-container" style="background-color: #ebfcf4; color: #20bf6b;">
+                        <i class="ph ph-leaf"></i>
+                    </div>
+                    <span class="cat-title">Nature</span>
+                    <i class="ph ph-caret-right cat-arrow"></i>
+                </div>
+                <!-- Travel -->
+                <div class="card category-card">
+                    <div class="cat-icon-container" style="background-color: #f4efff; color: #a55eea;">
+                        <i class="ph ph-airplane-tilt"></i>
+                    </div>
+                    <span class="cat-title">Travel</span>
+                    <i class="ph ph-caret-right cat-arrow"></i>
+                </div>
+                <!-- Entertainment -->
+                <div class="card category-card">
+                    <div class="cat-icon-container" style="background-color: #ffeff3; color: #eb3b5a;">
+                        <i class="ph ph-music-notes"></i>
+                    </div>
+                    <span class="cat-title">Entertainment</span>
+                    <i class="ph ph-caret-right cat-arrow"></i>
+                </div>
+                <!-- Lifestyle -->
+                <div class="card category-card">
+                    <div class="cat-icon-container" style="background-color: #fff9e6; color: #f7b731;">
+                        <i class="ph ph-graduation-cap"></i>
+                    </div>
+                    <span class="cat-title">Lifestyle</span>
+                    <i class="ph ph-caret-right cat-arrow"></i>
+                </div>
+            </div>
+        </section>
+        </div> <!-- End home-view -->
+
+        <!-- Gallery View -->
+        <div id="gallery-view" class="view" style="display: none;">
+            <header class="header">
+                <div class="logo-area">
+                    <h1>Gallery</h1>
+                </div>
+            </header>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="img/gallery_landscape_1777541604836.png" alt="Landscape"></div>
+                <div class="gallery-item"><img src="img/gallery_architecture_1777541623995.png" alt="Architecture"></div>
+                <div class="gallery-item"><img src="img/gallery_abstract_1777541641953.png" alt="Abstract"></div>
+                <div class="gallery-item"><img src="img/gallery_minimalist_1777541658335.png" alt="Minimalist"></div>
+            </div>
         </div>
-      </section>
+        
+        <!-- Padding block to prevent bottom nav overlap -->
+        <div style="height: 100px;"></div>
 
-      <section class="section-block" aria-labelledby="category-title">
-        <div class="section-head">
-          <h2 id="category-title">Choose Categories</h2>
-          <span id="resultCount">8 prompts</span>
-        </div>
-
-        <div class="category-grid" aria-label="Prompt categories">
-          <button class="category-tile" type="button" data-query="business">
-            <span class="round-icon sky" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M5 9h14v10H5zM5 13h14" /></svg>
-            </span>
-            <span>Business</span>
-            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
-          </button>
-
-          <button class="category-tile" type="button" data-query="food">
-            <span class="round-icon peach" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M7 3v8M11 3v8M7 7h4M18 3v18M15 3v7a3 3 0 0 0 3 3" /></svg>
-            </span>
-            <span>Food</span>
-            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
-          </button>
-
-          <button class="category-tile" type="button" data-query="nature">
-            <span class="round-icon mint" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14ZM5 19 19 5" /></svg>
-            </span>
-            <span>Nature</span>
-            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
-          </button>
-
-          <button class="category-tile" type="button" data-query="travel">
-            <span class="round-icon lavender" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="m4 16 16-8-8 16-2-8-6-2Z" /></svg>
-            </span>
-            <span>Travel</span>
-            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
-          </button>
-
-          <button class="category-tile" type="button" data-query="entertainment">
-            <span class="round-icon pink" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M9 18V5l10-2v13M9 9l10-2M5 21a4 4 0 1 0 4-4 4 4 0 0 0-4 4ZM15 18a4 4 0 1 0 4-4 4 4 0 0 0-4 4Z" /></svg>
-            </span>
-            <span>Entertainment</span>
-            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
-          </button>
-
-          <button class="category-tile" type="button" data-query="lifestyle">
-            <span class="round-icon cream" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="m4 10 8-5 8 5-8 5-8-5ZM7 13v4c3 2 7 2 10 0v-4" /></svg>
-            </span>
-            <span>Lifestyle</span>
-            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
-          </button>
-        </div>
-      </section>
-
-      <section class="prompt-panel" aria-labelledby="prompt-title">
-        <div class="section-head">
-          <h2 id="prompt-title">Viral Prompts</h2>
-          <span id="radarStatus">8 active</span>
-        </div>
-        <div class="prompt-list" id="promptList"></div>
-      </section>
-
-      <form class="brief-sheet" id="briefForm" aria-label="Create prompt brief">
-        <div class="section-head">
-          <h2>Creator Brief</h2>
-          <span id="avgLift">42%</span>
-        </div>
-        <label>
-          Niche
-          <input id="nicheInput" type="text" placeholder="skincare, coaching, cafes..." />
-        </label>
-        <label>
-          Audience
-          <select id="moodInput">
-            <option>curious beginners</option>
-            <option>busy professionals</option>
-            <option>budget shoppers</option>
-            <option>trend watchers</option>
-          </select>
-        </label>
-        <button type="submit">Create brief</button>
-        <output id="briefOutput">Add your niche to turn the top viral format into a posting plan.</output>
-      </form>
-
-      <nav class="bottom-nav" aria-label="Bottom navigation">
-        <button class="tab active" type="button" data-view="discover">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20h-5v-6H9v6H4z" /></svg>
-          <span>Home</span>
-        </button>
-        <button class="tab" type="button" data-view="saved">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7zM14 3v5h5M10 13h6M10 17h6" /></svg>
-          <span>Saved</span>
-        </button>
-        <button class="add-tab" type="button" data-view="brief" aria-label="Create brief">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
-        </button>
-        <button class="tab" type="button" data-platform="X">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v11H4zM8 7V5h8v2M8 13h8" /></svg>
-          <span>Threads</span>
-        </button>
-        <button class="tab" type="button" data-view="discover">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM7 15l3-3 3 3 2-2 3 3" /></svg>
-          <span>Gallery</span>
-        </button>
-      </nav>
-    </main>
-
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active" data-target="home-view">
+                <i class="ph-fill ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="ph ph-file-text"></i>
+                <span>Notes</span>
+            </a>
+            <div class="nav-fab-container">
+                <button class="fab">
+                    <i class="ph ph-plus"></i>
+                </button>
+            </div>
+            <a href="#" class="nav-item">
+                <i class="ph ph-wallet"></i>
+                <span>Finance</span>
+            </a>
+            <a href="#" class="nav-item" data-target="gallery-view">
+                <i class="ph ph-image"></i>
+                <span>Gallery</span>
+            </a>
+        </nav>
+    </div>
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
